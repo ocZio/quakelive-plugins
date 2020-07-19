@@ -13,7 +13,7 @@ class disableteamsizevote(minqlx.Plugin):
         self.add_hook('round_start', self.handle_round_start)
         self.add_hook('map', self.handle_map)
 
-    def handle_map(self):
+    def handle_map(self, *args, **kwargs):
         self.teamsize_is_disabled = False
         self.game.teamsize = 8
 
